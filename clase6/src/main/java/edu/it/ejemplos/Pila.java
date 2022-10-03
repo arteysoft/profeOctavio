@@ -41,17 +41,18 @@ public class Pila implements Runnable {
 		System.out.println("Despues de llamar a m2");
 	}
 	public void run() {
-		try {
-			System.out.println("Ejercicio de la pila o Stack");
-			// Vamos a iterar desde -10 hasta 10 y solo va fallar una de las iteraciones			
-			{
-				m1(-5);
-				Thread.sleep(2000);
+		System.out.println("Ejercicio de la pila o Stack");
+		
+		for (int x = -5; x <= -5; x++) {
+			try {
+				m1(x);
+				Thread.sleep(2000);			
+			}
+			catch (Exception ex) {
+				ex.printStackTrace();
 			}
 		}
-		catch (Exception ex) {
-			ex.printStackTrace();
-		}
+		
 		System.out.println("Sigue la aplicacion normalmente");
 	}
 }
