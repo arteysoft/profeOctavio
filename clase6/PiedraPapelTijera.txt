@@ -1,0 +1,68 @@
+Piedra papel o tijera
+
+CONST PIEDRA = 1;
+CONST PAPEL = 2;
+CONST TIJERA = 3;
+
+function ppt (jugador1, jugador2) {
+   switch (jugador1) {
+   case PIEDRA:
+        
+      break;
+   case PAPEL:
+      break;
+   case TIJERA:
+      break;
+   }
+}
+
+Armando la logica.
+Que caracteristica tiene la logica ?
+
+Es funcion pura. Son las matematicas.
+
+Dados una serie de inputs ? de ser los mismos, la funcion retorna el mismo output
+
+sum(3, 6) -> 9
+sum(2, 3) -> 5
+
+Guarda !!!!
+
+sum(1, 4) -> 5
+
+La funcion pura es facil de testear y facil de razonar
+
+ppt(piedra, papel) -> gana2
+ppt(piedra, tijera) -> gana1
+ppt(piedra, piedra) -> empate
+
+-------------------------------------------------------------------------------
+
+obtenerDescuento(monto, esJubilado, tarjeta, diaSemana)
+
+Yo llamo a obtener descuento 5000, true, galicia, jueves  para la promo vamos los jueves.
+10%
+
+-------------------------------------------------------------------------------
+
+Como hacer el input de usuario maquina ? y usuario persona ?
+
+obtenerPPTAleatorio
+
+LectorJugador es una interfaz
+   LectorJugadorRandom
+   LectorJugadorConsola
+
+LectorJugador tiene un metodo obtenerPPT()
+
+LectorJugador lectorJugador1 = new LectorJugadorRandom();
+LectorJugador lectorJugador2 = new LectorJugadorConsola();
+
+ppt(lectorJugador1.obtenerPPT(), lectorJugador2.obtenerPPT())
+
+
+
+
+
+
+
