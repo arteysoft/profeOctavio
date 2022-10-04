@@ -2,11 +2,11 @@ package edu.it;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import edu.it.ejemplos.Pila;
+import edu.it.ejemplos.SQL;
 
 @SpringBootApplication
 public class CursoSpringApplication {
 	public static void main(String... params) throws Exception {
-		new Pila().run();
+		new SQL().run();
 	}
 }
