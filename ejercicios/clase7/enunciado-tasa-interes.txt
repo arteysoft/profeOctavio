@@ -1,0 +1,24 @@
+TNA Del banco es 72%
+TNA De la bolsa de comercio es de 62%
+
+Ahora bien, una este especificada por mes.
+La otra, esta especificada por dia.
+
+Un Servicio llamado SrvCalculosInteres
+
+un metodo calcularTasaFinal(double TNA, Integer cantidadDeCortes) {
+   En un plazo fijo mensual son 12 cortes. Interes compuesto es: 
+   Se capitaliza el interes anterior.
+
+   100 2, el proximo periodo es 102 2.2
+}
+
+Pensar que el interes compuesto para la tasa diaria, habria que aplicarlo en 365 veces.
+
+
+
+Como se invoca al metodo
+
+calcularTasaFinal(72, 12)
+calcularTasaFinal(62, 365)
+
