@@ -1,0 +1,22 @@
+Como descubrir numero primos
+
+
+Sabemos que los numeros primos son aquellos divisibles por 1 y por uno mismo.
+
+Tomo el 3 es divible por los anteriores primos ?????? 2 
+     SI ES NO ? ES PRIMO
+     SI ES SI ? NO ES PRIMO
+
+Tomo el 4 [2, 3]
+Tomo el 5 [2, 3]   ************
+Tomo el 6 [2, 3, 5]
+Tomo el 7 [2, 3, 5] ***********
+Tomo el 8 [2, 3, 5, 7]
+Tomo el 9 [2, 3, 5, 7] 
+Tomo el 10
+Tomo el 11 [2, 3, 5, 7] ***********
+Tomo el 12 [2, 3, 5, 7, 11]
+Tomo el 13 [2, 3, 5, 7, 11] *********
+
+Tenemos que llegar a los 500.000
+

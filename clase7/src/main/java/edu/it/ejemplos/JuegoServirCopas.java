@@ -7,8 +7,6 @@ public class JuegoServirCopas {
 		var botella = new BotellaService();
 		try {
 			botella.servirCopa();
-			int z = 0;
-			int x = 2 / z;  
 			botella.servirCopa();
 			botella.servirCopa();
 		}
@@ -19,5 +17,8 @@ public class JuegoServirCopas {
 		catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}		
+		finally {
+			System.out.println("Pasa siempre por aca... cierra conexiones, etc.");
+		}
 	}
 }

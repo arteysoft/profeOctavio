@@ -1,0 +1,19 @@
+Le paso al metodo un numero.
+
+Si es par ? lo divido por dos
+Si es impar ? le aplico la formula 3n + 1
+
+Ejemplos
+
+7 es impar le aplico 3.7 + 1 = 22
+22 es par lo divido por la mitad 11
+11 es impar le aplico 34
+34 es par lo divido por 2 da 17
+17 ....
+
+Que es una conjetura, es una hipotesis que NO pudo ser probada matematicamente.
+
+4, 2, 1 .... 4, 2, 1 .... 4,2,1 ..... 4,2,1 ......
+
+3513541545678941351
+
