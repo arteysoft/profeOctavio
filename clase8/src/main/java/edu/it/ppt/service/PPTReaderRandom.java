@@ -7,7 +7,6 @@ import edu.it.ppt.enums.ELEMENTOS;
 public class PPTReaderRandom implements PPTReader {
 	public ELEMENTOS read() {
 		var elementoElegido = new Random().nextInt(3);
-		
-		return null;
+		return PPTReaderConsola.ObtenerElementoSegunInteger(elementoElegido+1);
 	}
 }
