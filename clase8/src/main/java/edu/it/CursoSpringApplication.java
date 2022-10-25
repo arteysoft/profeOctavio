@@ -2,13 +2,11 @@ package edu.it;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import edu.it.ejemplos.EjemploMapa;
+import edu.it.ppt.Init;
 
 @SpringBootApplication
 public class CursoSpringApplication {
 	public static void main(String... params) throws Exception {
-		// new Init().run();
-		
-		new EjemploMapa().run();
+		new Init().run();
 	}
 }
