@@ -1,0 +1,37 @@
+
+class Chofer {
+  String nombre;
+  Boolean leGustaSuTrabajo;
+  Integer cantAccidentes;
+}
+
+List<Chofer> ... Hay que cargar... 10 choferes
+
+interface FiltroChofer {
+   Boolean filtro(Chofer c);
+}
+
+Hacer los filtros para:
+
+Choferes que No les su trabajo y Tienen accidentes
+Choferes que No les su trabajo y NO Tienen accidentes
+
+Choferes que Si les su trabajo y Tienen accidentes
+Choferes que Si les su trabajo y NO Tienen accidentes
+
+
+Por ultimo recorrer la Lista y segun el filtro mostrar o no.
+
+
+SI SE VE DIFICIL ?????? 
+
+Arrancamos con la Interface 
+
+class Chofer {
+   public Integer edad;
+}
+
+Hacer Filtro chofer > 18 SI:NO
+
+
+
