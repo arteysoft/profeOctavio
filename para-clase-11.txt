@@ -1,0 +1,9 @@
+Hacer el mismo robot, pero que descargue una consulta al sql, a un folder
+
+Dao DTO
+Dao DTO con Template Method
+
+JPA
+
+
+
