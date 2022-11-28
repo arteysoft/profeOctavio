@@ -34,4 +34,13 @@ public class Utiles {
         
         return usu;
 	}
+	public static void intentarOperacion(RunnableConException r) {
+		// Intenta realizar una operacion, pero si falla, traga el exception
+		try {
+			r.run();
+		}
+		catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
 }

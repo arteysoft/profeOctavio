@@ -6,8 +6,13 @@ import java.sql.DriverManager;
 import edu.it.dto.Usuario;
 import edu.itutiles.Utiles;
 
-public class EjemploConexionDB {
-	public void realizarUnInsert(Connection conn, Usuario usu) {
+public class UsuarioDAO {
+	private java.sql.Connection conn = null;
+	
+	public UsuarioDAO(Connection conn) {
+		this.conn = conn;
+	}
+	public void realizarUnInsert(Usuario usu) {
 		try {
 			var stm = conn.prepareStatement("INSERT into usuarios VALUES (?,?,?,?,?,?)");
 			stm.setString(1, usu.id);
@@ -24,21 +29,19 @@ public class EjemploConexionDB {
 			throw err;
 		}
 	}
+	public void realizarUnUpdate(Usuario usu) {
+		// Pasos a seguir
+		// 1) Probar el update en el mysql 
+		// update usuarios set nombre = 'SARASA' where id = 'unIDDeterminado'
+		// 2) Considerar que el id, es el campo usu.id que viene en el objeto
+		// 3) Dado que NO conozco todo lo que se cambio, tengo que actualizar todo el objeto.
+		// El resto ? es igual que realizar un insert
+	}
 	public void run() {
-		Connection conn = null;
 		try {
-			conn = DriverManager.getConnection(
-					"jdbc:mariadb://localhost:3306/profeoctavio", 
-					"root", "");
+			var usuario = Utiles.crearUsuarioRandom();			
+			// realizarUnInsert(usuario);
 			
-			System.out.println("Conexion Abierta");
-			
-			var usuario = Utiles.crearUsuarioRandom();
-			
-			realizarUnInsert(conn, usuario);
-			
-			System.out.println("Voy a cerrar conexion");
-			conn.close();
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
