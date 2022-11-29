@@ -14,8 +14,10 @@ public class ImprimePorConsolaOpcionBorrado {
 		this.usuarioDAO = usuarioDAO;
 	}
 	
-	public void run() {
-		var lista = usuarioDAO.obtenerListaUsuario("nombre = 'Addie'");
+	public void run(String paramNombre) {
+		var strSQL = String.join("", "nombre like ", "'%", paramNombre, "%'");
+		System.out.println(strSQL);
+		var lista = usuarioDAO.obtenerListaUsuario(strSQL);
 		
 		Scanner scn = new Scanner(System.in);
 		

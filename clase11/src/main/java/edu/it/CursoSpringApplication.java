@@ -14,6 +14,10 @@ public class CursoSpringApplication {
 	public static void main(String... params) throws Exception {
 		ConnectionManager connManager = new ConnectionManager();
 		try {
+			if (params.length == 0) {
+				throw new RuntimeException("Se requiere el parametro nombre");
+			}
+			
 			var conn = connManager.conectar();
 			var usuarioDao = new UsuarioDAO(conn);
 			var imprimeBorra = new edu.it.servicios.ImprimePorConsolaOpcionBorrado(usuarioDao);
@@ -21,7 +25,7 @@ public class CursoSpringApplication {
 			// Quiero que pasen el nombre como parametro. params[0] tendria que venir cargado con el nombre
 			// Se lo voy a pasar el run como parametro tb. y el run como parametro al string. 
 			// en vez de dejarlo como addie, lo parametrizo.
-			imprimeBorra.run();
+			imprimeBorra.run(params[0]);
 			
 			Utiles.intentarOperacion(() -> {
 				System.out.println("Voy a cerrar conexion");
