@@ -1,0 +1,24 @@
+Van a bajar apache tomcat
+
+https://tomcat.apache.org/download-90.cgi
+
+van a bajar el .zip
+
+esto baja en user/{sunombredeusuario}/downloads
+
+esto lo voy a descomprimir en 
+
+/opt/apache-tomcat-9.0.69/
+
+cd /opt/apache-tomcat-9.0.69/bin
+
+C:\opt\apache-tomcat-9.0.68\bin
+
+java -cp tomcat-juli.jar;bootstrap.jar org.apache.catalina.startup.Bootstrap
+
+Luego desde el browser, van a hacer 
+
+localhost:8080
+
+Van a ver algunos ejemplos ahi.
+
