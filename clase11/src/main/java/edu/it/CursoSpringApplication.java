@@ -16,11 +16,12 @@ public class CursoSpringApplication {
 		try {
 			var conn = connManager.conectar();
 			var usuarioDao = new UsuarioDAO(conn);
-			var lista = usuarioDao.obtenerListaUsuario("nombre = 'Addie'");
+			var imprimeBorra = new edu.it.servicios.ImprimePorConsolaOpcionBorrado(usuarioDao);
 			
-			for (Usuario u : lista) {
-				System.out.println(new Gson().toJson(u));
-			}
+			// Quiero que pasen el nombre como parametro. params[0] tendria que venir cargado con el nombre
+			// Se lo voy a pasar el run como parametro tb. y el run como parametro al string. 
+			// en vez de dejarlo como addie, lo parametrizo.
+			imprimeBorra.run();
 			
 			Utiles.intentarOperacion(() -> {
 				System.out.println("Voy a cerrar conexion");
