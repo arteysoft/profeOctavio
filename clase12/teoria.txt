@@ -1,0 +1,43 @@
+HTTP SERVER 
+
+Servidor HTTP que soporta este protocolo.
+
+Pasos a seguir para subir el tomcat
+
+1) Download Tomcat 9
+   https://tomcat.apache.org/download-90.cgi
+   Bajar el zip
+
+2) Descomprimirlo y copiarlo a la carpeta opt
+
+3) Chequear que escribiendo java --version me da la version correcta de java
+4) echo %JAVA_HOME%
+5) echo %PATH%
+
+6) pararse en la carpeta de binarios de tomcat
+   cd C:\opt\apache-tomcat-9.0.70\bin
+   java -cp tomcat-juli.jar;bootstrap.jar org.apache.catalina.startup.Bootstrap
+
+Es bueno mencionar que:
+
+HTTP es un protocolo que viene arriba de TCP que viene arriba de IP
+
+
+Capas tenemos
+
+Capa de control HTTP   5 OSI
+Capa de control TCP    4 OSI
+Capa de Routers IP     3 OSI
+
+
+Ahora bien. En la carpeta Webapps vamos a tener una web por carpeta.
+No obstante, hay una carpeta especial que se llama ROOT que es donde va dirijido
+si NO especifico ninguna url que sea una carpeta.
+
+
+Si hago http://127.0.0.1:8080/ Estoy obteniendo los recursos de webapps/ROOT
+
+Para la proxima, vean estos ejemplos
+
+http://127.0.0.1:8080/examples/servlets/
+
