@@ -8,6 +8,10 @@
     <servlet-name>alumnos</servlet-name>
     <servlet-class>edu.it.controllers.AlumnosController</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>inventar</servlet-name>
+    <servlet-class>edu.it.controllers.InventarAlumnoController</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>alumnos</servlet-name>
     <url-pattern>/alumno</url-pattern>
@@ -16,4 +20,10 @@
     <servlet-name>alumnos</servlet-name>
     <url-pattern>/alumno/*</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>inventar</servlet-name>
+    <url-pattern>/inventar</url-pattern>
+  </servlet-mapping>
 </web-app>
+
+
