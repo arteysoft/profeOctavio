@@ -4,43 +4,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import edu.it.ejemplos.ConnectionManager;
-import edu.it.ejemplos.EjemploCreacionUnUsuarioRandom;
-import edu.it.servicios.EmisionFactura;
+import com.google.gson.Gson;
+
+import edu.it.repository.UsuarioRepository;
+import edu.it.utiles.Utiles;
 
 @Component
 public class MainClass implements CommandLineRunner {
 	
 	@Autowired
-	private ConnectionManager connectionManager;
+	Utiles utiles;
 	
 	@Autowired
-	private EjemploCreacionUnUsuarioRandom ejemploCreacionUnUsuarioRandom;
-	
-	@Autowired
-	EmisionFactura emisionFactura;
+	UsuarioRepository usuarioRepository;
 	
 	public void run(String... args) throws Exception {
-		System.out.println("Hola mundo...");
-		
-		try {
-			connectionManager.conectar();
+		for (int i = 0; i < 10000; i++) {
+			var usuario = utiles.crearUsuarioRandom();
+			// usuario.id = "6e732f7d-ac05-4358-8edf-458ceb9044e9"; CAMBIAR POR ID QUE EXISTA
+			System.out.println(new Gson().toJson(usuario));
+			usuarioRepository.save(usuario);
 		}
-		catch (edu.it.error.SQLException ex) {
-			System.out.println(ex.getMessage());
-		}
-		
-		ejemploCreacionUnUsuarioRandom.run();
-		
-		/*
-		 * Crear una clase EmisionFactura con un metodo emitirFactura
-		 * Crear una clase calculoIva con un metodoCalcular
-		 * 
-		 * MainClass depende de EmisionFactura que depende de CalculoIva
-		 * MainClass ---------> EmisionFactura -------------> CalculoIva
-		 * 
-		 */
-		
-		emisionFactura.emitirFactura();
 	}
 }
